@@ -3,10 +3,13 @@ import axios from "axios";
 
 const userLogin = createAsyncThunk("user/login", async (credentials) => {
     try {
-        const response = await axios.post("http://localhost:4000/users/login", {
-            username: credentials.username,
-            password: credentials.password,
-        });
+        const response = await axios.post(
+            `${import.meta.env.VITE_API_URL}/users/login`,
+            {
+                username: credentials.username,
+                password: credentials.password,
+            }
+        );
 
         const user = {
             ...response.data.user,

@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 const userSignup = createAsyncThunk("user/signup", async (user) => {
     try {
         const response = await axios.post(
-            "http://localhost:4000/users/signup",
+            `${import.meta.env.VITE_API_URL}/users/signup`,
             user
         );
 

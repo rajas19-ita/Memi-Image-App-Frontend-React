@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 const tagsApi = createApi({
     reducerPath: "tags",
     baseQuery: fetchBaseQuery({
-        baseUrl: "http://localhost:4000/tags",
+        baseUrl: `${import.meta.env.VITE_API_URL}/tags`,
     }),
     endpoints(builder) {
         return {
