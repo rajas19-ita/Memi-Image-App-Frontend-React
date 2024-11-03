@@ -26,4 +26,8 @@ export * from "./thunks/userLogin";
 export * from "./thunks/userSignup";
 export * from "./thunks/appInit";
 export { useFetchImagesQuery, useAddImageMutation } from "./apis/imagesApi";
-export { useFetchTagsQuery, useAddTagMutation } from "./apis/tagsApi";
+export {
+    useFetchTagsQuery,
+    useAddTagMutation,
+    useFetchUserTagsQuery,
+} from "./apis/tagsApi";

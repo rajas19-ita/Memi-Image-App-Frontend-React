@@ -8,6 +8,7 @@ function Button({
     updateBtn,
     isLoading,
     isDisabled,
+    outlineBtn,
     className,
     ...rest
 }) {
@@ -18,8 +19,9 @@ function Button({
             "py-2": !isLoading,
             "bg-opacity-60 text-opacity-60": isDisabled,
             "bg-green-400": updateBtn,
-            "bg-sky-400": primaryBtn,
+            "bg-sky-300": primaryBtn,
             "bg-slate-300": secondaryBtn,
+            "border-[1.3px] border-gray-300 bg-white": outlineBtn,
         },
         className
     );

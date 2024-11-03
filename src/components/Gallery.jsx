@@ -17,7 +17,7 @@ function Gallery({ imagesData, isLoading, error, page, pageSize, setPage }) {
         if (imagesData.totalImages === 0) {
             content = (
                 <p className="self-center py-3 text-gray-500">
-                    No Images Added
+                    nothing to show
                 </p>
             );
         } else {

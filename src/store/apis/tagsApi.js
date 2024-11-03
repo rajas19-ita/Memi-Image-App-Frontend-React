@@ -41,9 +41,26 @@ const tagsApi = createApi({
                     };
                 },
             }),
+            fetchUserTags: builder.query({
+                query: ({ user }) => {
+                    return {
+                        url: "/user",
+                        headers: {
+                            Authorization: `Bearer ${user.token}`,
+                        },
+                    };
+                },
+                transformResponse: (response) => {
+                    return response.reduce((acc, tag) => {
+                        acc.push({ label: tag.tagName, value: tag.id });
+                        return acc;
+                    }, []);
+                },
+            }),
         };
     },
 });
 
-export const { useFetchTagsQuery, useAddTagMutation } = tagsApi;
+export const { useFetchTagsQuery, useAddTagMutation, useFetchUserTagsQuery } =
+    tagsApi;
 export { tagsApi };

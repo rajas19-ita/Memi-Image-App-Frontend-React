@@ -11,12 +11,16 @@ const imagesApi = createApi({
                 providesTags: (result, error, args) => {
                     return [`page${args.page}`];
                 },
-                query: ({ user, page, pageSize }) => {
+                query: ({ user, page, pageSize, filters }) => {
                     return {
                         url: "/",
                         params: {
                             page,
                             pageSize,
+                            ...(filters.title ? { title: filters.title } : {}),
+                            sortBy: filters.sortBy,
+                            order: filters.order,
+                            ...(filters.tagId ? { tagId: filters.tagId } : {}),
                         },
                         headers: {
                             Authorization: `Bearer ${user.token}`,
