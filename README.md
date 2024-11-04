@@ -1,8 +1,21 @@
-# React + Vite
+# Memi Image Gallery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React based frontend for Image gallery app, allowing users to upload, search and filter images. ([Api](https://github.com/rajas19-ita/Memi-Image-App-Backend-NodeJs.git))
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   Jwt based user authentication
+-   Upload image with title and tags
+-   Search, sort and filter Images using tags, title and uploadDate
+
+## Tech Stack
+
+React, Redux, RTK Query, TailwindCSS
+
+## Demo
+
+Check out the live app here: [https://memi-gallery.netlify.app/](https://memi-gallery.netlify.app/)
+
+## Feedback
+
+If you have any feedback, please reach out at rajaskadge@gmail.com
